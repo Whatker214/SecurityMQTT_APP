@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvPayloadTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PayLoad Message"
+        android:textColor="#1B719F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadTitle">
+
+        <TextView
+            android:id="@+id/tvPayloadMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#1B719F" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:padding="10dp"
+        android:text="Subscribe"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <Button
+        android:id="@+id/btnPub"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:padding="10dp"
+        android:text="Publish"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edPubMsg" />
+
+    <EditText
+        android:id="@+id/edTopic"
+        android:layout_width="177dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:hint="Topic"
+        android:textColor="#1B719F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edPubMsg" />
+
+    <EditText
+        android:id="@+id/edSubTopic"
+        android:layout_width="177dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="Subscribe Topic"
+        android:inputType="text"
+        android:textColor="#1B719F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <EditText
+        android:id="@+id/edPubMsg"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Publish Message"
+        android:textColor="#1B719F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSub" />
+
+    <TextView
+        android:id="@+id/tvNumRxMsgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="RX: "
+        android:textColor="#1B719F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvPayloadTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumMsgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="52dp"
+        android:textAlignment="viewStart"
+        android:textColor="#1B719F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNumRxMsgs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00FFFFFF"
+        android:text="登入"
+        android:textColor="#A3A3A3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
